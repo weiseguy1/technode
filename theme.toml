@@ -3,19 +3,13 @@
 
 name = "Technode"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
+licenselink = "https://github.com/weiseguy1/technode/blob/master/LICENSE"
+description = "A simple, responsive clone of Techno Tim's website"
+homepage = "https://github.com/weiseguy1/technode"
+tags = ["blog", "personal", "responsive"]
+features = ["blog", "personal", "responsive"]
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Weiseguy"
+  homepage = "docs.weiseguy.net"
