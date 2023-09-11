@@ -1,8 +1,11 @@
-@import url(https://fonts.bunny.net/css?family=poppins:300,400,500,600);
+@import url(https://fonts.bunny.net/css?family=source-sans-pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i);
 
 $main-bg: #1B1B1E;
 $text-color: #AFB0B1;
 $avatar-border-color: #CECECE;
+$sidebar-active-color: #fff;
+$sidebar-hover-bg: #363636;
+$body-font-family: 'Source Sans Pro', sans-serif; 
 $body-font-size: 1rem;
 $body-font-weight: 400;
 $body-line-height: 1.5;
@@ -19,7 +22,7 @@ body {
     padding: 0;
     background: $main-bg;
     color: $text-color;
-    font-family: 'Poppins', sans-serif;
+    font-family: $body-font-family;
     font-size: $body-font-size;
     font-weight: $body-font-weight;
     line-height: $body-line-height;
@@ -30,6 +33,26 @@ body {
 
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    transition: all .35s ease-in-out;
+}
+
+img, svg {
+    vertial-align: middle;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
 #sidebar {
@@ -62,13 +85,76 @@ a {
     }
 
     #avatar {
-    display: block;
-    width: 7rem;
-    height: 7rem;
-    overflow: hidden;
-    box-shadow: $avatar-border-color 0 0 0 2px;
-    transform: translateZ(0);
-    border-radius: 50%;
+        display: block;
+        width: 7rem;
+        height: 7rem;
+        overflow: hidden;
+        box-shadow: $avatar-border-color 0 0 0 2px;
+        transform: translateZ(0);
+        border-radius: 50%;
+
+        img {
+            transition: transform .5s;
+        }
+    }
+
+    .site-title {
+        font-weight: 900;
+        font-size: 1.75rem;
+        line-height: 1.2;
+        letter-spacing: .25px;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+
+        a {
+            color: #868585;
+        }
+    }
+
+    .site-subtitle {
+        font-size: 95%;
+        font-style: italic;
+        color: #6d6c6b;
+        margin-top: 0.25rem;
+        word-spacing: 1px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 2rem;
+        list-style: none;
+        width: 100%;
+
+        .menu-item {
+            opacity: .9;
+            width: 100%;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            display: list-item;
+            text-align: -webkit-match-parent;
+
+            .menu-link {
+                padding-top: 0.6rem;
+                padding-bottom: 0.6rem;
+                display: flex;
+                align-items: center;
+                border-radius: 0.75rem;
+                font-weight: 600;
+            }
+
+            .menu-link:hover {
+                background-color: $sidebar-hover-bg;
+                transition: .3s ease-in-out;
+            }
+        }
     }
 
     & .sidebar-bottom a,
@@ -77,4 +163,3 @@ a {
         transition: all .3s ease-in-out; 
     }
 }
-
