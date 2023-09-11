@@ -16,7 +16,7 @@
             <li class="menu-item">
                 <a href="{{ .URL }}" class="menu-link">
                     {{ .Pre }}
-                    <span class="link">{{ .Name | safeHTML }}</span>
+                    <span class="link">{{ .Name | upper }}</span>
                 </a>
             </li>
             {{ end }}
