@@ -2,10 +2,17 @@
 
 $main-bg: #1B1B1E;
 $text-color: #AFB0B1;
+$avatar-border-color: #CECECE;
 $body-font-size: 1rem;
 $body-font-weight: 400;
 $body-line-height: 1.5;
+$sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
 
+*,
+::after ,
+::before {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -20,3 +27,54 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
+
+a {
+    text-decoration: none;
+}
+
+#sidebar {
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    width: 260px;
+    z-index: 99;
+    background: $sidebar-bg;
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .profile-wrapper {
+        margin-bottom: 2.5rem;
+        padding-left: 2.5rem;
+        padding-right: 1.25rem;
+        width: 100%;
+    }
+
+    @media (min-width: 850px) {
+        & .profile-wrapper {
+            margin-top: 3rem;
+        }
+    }
+
+    #avatar {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    overflow: hidden;
+    box-shadow: $avatar-border-color 0 0 0 2px;
+    transform: translateZ(0);
+    border-radius: 50%;
+    }
+
+    & .sidebar-bottom a,
+    & .site-title a,
+    & .profile-wrapper {
+        transition: all .3s ease-in-out; 
+    }
+}
+

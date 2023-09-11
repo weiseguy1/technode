@@ -1,29 +1,27 @@
 <nav>
-    <div class="sidebar">
-        <div class="sidebar-content">
-            <div class="profile-wrapper">
-                <a href="#" id="avatar" class="rounded-circle">
-                    <img src="{{ .Site.Params.avatarURL }}" alt="avatar" height="112" width="112" onerror="this.style.display='none'">
-                </a>
-                <div class="site-title">
-                    <a href="#">{{ .Site.Title }}</a>  
-                </div>
-                <div class="site-subtitle">
-                    <p>{{ .Site.Params.description }}</p> 
-                </div>
+    <div id="sidebar">
+        <div class="profile-wrapper">
+            <a href="#" id="avatar">
+                <img src="{{ .Site.Params.avatarURL }}" alt="avatar" height="112" width="112" onerror="this.style.display='none'">
+            </a>
+            <div class="site-title">
+                <a href="#">{{ .Site.Title }}</a>  
             </div>
-            <ul class="lists">
-                {{ range .Site.Menus.main }}
-                <li class="list">
-                    <a href="{{ .URL }}" class="nav-link">
-                        {{ .Pre }}
-                        <span class="link">{{ .Name | safeHTML }}</span>
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-
-            {{ partial "social.html" . }}
+            <div class="site-subtitle">
+                <p>{{ .Site.Params.description }}</p> 
+            </div>
         </div>
+        <ul class="lists">
+            {{ range .Site.Menus.main }}
+            <li class="list">
+                <a href="{{ .URL }}" class="nav-link">
+                    {{ .Pre }}
+                    <span class="link">{{ .Name | safeHTML }}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+
+        {{ partial "social.html" . }}
     </div>
 </nav>
