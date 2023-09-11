@@ -1,30 +1,30 @@
-<nav id="sidebar" class="d-flex d-column align-items-end">
-    <div class="profile-wrapper">
-        <a href="{{ .Site.BaseURL }}" class="rounded-circle">
-            <img src="{{ .Site.Params.avatar }}" height="112" width="112" alt="avatar">
-        </a>
-        <div class="site-title">
-            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> 
+<nav>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-wrapper">
+                <a href="#" id="avatar" class="rounded-circle">
+                    <img src="{{ .Site.Params.avatarURL }}" alt="avatar" height="112" width="112" onerror="this.style.display='none'">
+                </a>
+                <div class="site-title">
+                    <a href="#">{{ .Site.Title }}</a>  
+                </div>
+                <div class="site-subtitle">
+                    <p>{{ .Site.Params.description }}</p> 
+                </div>
+            </div>
+            <ul class="lists">
+                {{ range .Site.Menus.main }}
+                <li class="list">
+                    <a href="{{ .URL }}" class="nav-link">
+                        {{ .Pre }}
+                        <span class="link">{{ .Name | safeHTML }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+
+            {{ partial "social.html" . }}
+
         </div>
-        <div class="site-subtitle fst-italic">
-            {{ with .Site.Params.description }} {{.}} {{ else }} A simple, responsive Hugo clone of Techno Tim's website
-        </div>
-    </div>
-    <ul class="nav flex-column flex-grow-1 w-100 ps-0">
-        {{ range .Site.Menus.main }}
-        <li class="nav-item">
-            <a href="{{ .URL }}" class="nav-link">
-                {{ .Pre | safeHTML }}
-                <span>{{ .Name | upper }}</span>
-            </a>
-        </li>
-        {{ end }}
-    </ul>
-    <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-        {{ range .Site.Menus.social }}
-        <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
-            {{ .Pre | safeHTML }}
-        </a> 
-        {{ end }}
     </div>
 </nav>
