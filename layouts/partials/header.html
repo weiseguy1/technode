@@ -1,27 +1,27 @@
-<nav>
-    <div id="sidebar">
-        <div class="profile-wrapper">
-            <a href="#" id="avatar">
-                <img src="{{ .Site.Params.avatarURL }}" alt="avatar" height="112" width="112" onerror="this.style.display='none'">
-            </a>
-            <div class="site-title">
-                <a href="#">{{ .Site.Title }}</a>  
-            </div>
-            <div class="site-subtitle">
-                <p>{{ .Site.Params.description }}</p> 
-            </div>
-        </div>
-        <ul class="menu">
+<aside aria-label="Sidebar" id="sidebar">
+    <header class="profile-wrapper">
+        <a href="#" id="avatar">
+            <img src="{{ .Site.Params.avatarURL }}" alt="avatar" height="112" width="112" onerror="this.style.display='none'">
+        </a>
+        <h1 class="site-title">
+            <a href="#">{{ .Site.Title }}</a>  
+        </h1>
+        <p class="site-subtitle">
+            {{ .Site.Params.description }} 
+        </p>
+    </header>
+    <nav>
+        <ul class="nav">
             {{ range .Site.Menus.main }}
-            <li class="menu-item">
-                <a href="{{ .URL }}" class="menu-link">
+            <li class="nav-item">
+                <a href="{{ .URL }}" class="nav-link">
                     {{ .Pre }}
-                    <span class="link">{{ .Name | upper }}</span>
+                    <span>{{ .Name | upper }}</span>
                 </a>
             </li>
             {{ end }}
         </ul>
+    </nav>
 
-        {{ partial "social.html" . }}
-    </div>
-</nav>
+    {{ partial "social.html" . }}
+</aside>
