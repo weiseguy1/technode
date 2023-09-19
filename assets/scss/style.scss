@@ -1,50 +1,6 @@
 @import 'colors';
 @import 'fonts';
-
-*,
-::after ,
-::before {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: $main-bg;
-    color: $text-color;
-    font-family: $body-font-family;
-    font-size: $body-font-size;
-    font-weight: $body-font-weight;
-    line-height: $body-line-height;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-
-a {
-    text-decoration: none;
-    color: $default-link-color;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    transition: all .35s ease-in-out;
-}
-
-img, svg {
-    vertial-align: middle;
-}
-
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
+@import 'boilerplate';
 
 #sidebar {
     padding-left: 0;
@@ -110,27 +66,31 @@ ul {
     user-select: none;
 }
 
+.nav-flex {
+    flex-grow: 1;
+    padding-left: 0;
+    flex-direction: column;
+    width: 100%;
+}
+
 .nav {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
-    flex-direction: column;
-    padding-left: 0;
     margin-bottom: 2rem;
     list-style: none;
-    width: 100%;
+    padding-left: 0;
 
     .nav-item {
         opacity: .9;
         width: 100%;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+        padding-bottom: 0.2rem;
         display: list-item;
         text-align: -webkit-match-parent;
 
         .nav-link {
-            padding-top: 0.6rem;
-            padding-bottom: 0.6rem;
+            padding: 0.6rem 1rem;
             display: flex;
             align-items: center;
             border-radius: 0.75rem;
