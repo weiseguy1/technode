@@ -165,6 +165,10 @@
     }
 }
 
+#sidebar .sidebar-bottom a:hover {
+    color: $sidebar-active-color;
+}
+
 #sidebar .sidebar-bottom a,
 #sidebar .site-title a,
 #sidebar .profile-wrapper {
