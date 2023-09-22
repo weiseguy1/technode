@@ -2,10 +2,8 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
-        <div>
-        {{- block "main" . }}{{- end }}
-        </div>
+        {{- partial "sidebar.html" . -}}
+        {{- partial "wrapper.html" . -}}
         <script src="/js/makeactive.js"></script>
         {{- partial "footer.html" . -}}
     </body>
