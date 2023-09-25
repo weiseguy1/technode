@@ -1,0 +1,216 @@
+@media all and (max-width: 576px) {
+    main .content>blockquote[class^=prompt-] {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 0;
+        max-width: none;
+    }    
+
+    #avatar {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #main-wrapper>.container,#topbar {
+        max-width:100%
+    }
+
+    #main-wrapper>.container {
+        padding-left: 0;
+        padding-right: 0
+    }
+}
+
+@media all and (max-width: 849px) {
+    main {
+        min-height:calc(100vh - 3rem - 6rem)
+    }
+
+    footer {
+        transition: transform .4s ease;
+        height: 6rem;
+        padding: 1.5rem 0
+    }
+
+    [sidebar-display] #sidebar {
+        transform: translateX(0)
+    }
+
+    [sidebar-display] #main-wrapper {
+        transform: translateX(260px)
+    }
+
+    [sidebar-display] #back-to-top {
+        visibility: hidden
+    }
+
+    #sidebar {
+        transition: transform .4s ease;
+        transform: translateX(-260px);
+        -webkit-transform: translateX(-260px)
+    }
+
+    #main-wrapper {
+        transition: transform .4s ease
+    }
+
+    #topbar,#main-wrapper>.container {
+        max-width: 100%
+    }
+
+    #search-result-wrapper {
+        width: 100%
+    }
+
+    #breadcrumb,search {
+        display: none
+    }
+
+    #topbar-wrapper {
+        transition: transform .4s ease,top .2s ease;
+        left: 0
+    }
+
+    main,#panel-wrapper {
+        margin-top: 0
+    }
+
+    #topbar-title,#sidebar-trigger,#search-trigger {
+        display: block
+    }
+
+    #search-result-wrapper .content {
+        letter-spacing: 0
+    }
+
+    #tags {
+        justify-content: center!important
+    }
+
+    h1.dynamic-title {
+        display: none
+    }
+
+    h1.dynamic-title~.content {
+        margin-top: 2.5rem
+    }
+}
+
+@media all and (min-width: 850px) {
+    html {
+        overflow-y: scroll;
+    }
+
+    #main-wrapper {
+        margin-left: 260px;
+    }
+
+    #sidebar .profile-wrapper {
+        margin-top: 3rem;
+    }
+}
+
+@media all and (min-width: 992px)and (max-width:1199px) {
+    #main-wrapper>.container .col-lg-11 {
+        flex:0 0 96%;
+        max-width: 96%
+    }
+}
+
+@media all and (min-width: 850px)and (max-width:1199px) {
+    #search-results>div {
+        max-width:700px
+    }
+
+    #breadcrumb {
+        width: 65%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        white-space: nowrap
+    }
+}
+
+@media all and (max-width: 1199px) {
+    #panel-wrapper {
+        display:none
+    }
+
+    #main-wrapper>.container>div.row {
+        justify-content: center!important
+    }
+}
+
+@media all and (min-width: 1200px) {
+    search {
+        margin-right:4rem
+    }
+
+    #search-input {
+        transition: all .3s ease-in-out
+    }
+
+    #search-results>article {
+        width: 45%
+    }
+
+    #search-results>article:nth-child(odd) {
+        margin-right: 1.5rem
+    }
+
+    #search-results>article:nth-child(even) {
+        margin-left: 1.5rem
+    }
+
+    #search-results>article:last-child:nth-child(odd) {
+        position: relative;
+        right: 24.3%
+    }
+
+    .content {
+        font-size: 1.03rem
+    }
+}
+
+@media all and (min-width: 1400px) {
+    #back-to-top {
+        right:calc((100vw - 260px - 1140px)/2 + 3rem)
+    }
+}
+
+@media (min-width: 1650px) {
+    #main-wrapper {
+        margin-left: 300px;
+    }
+
+    #sidebar {
+        width: 300px;
+    }
+
+    #sidebar .profile-wrapper {
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
+        padding-left: 3.5rem;
+    }
+
+    #sidebar ul li.nav-item {
+        padding-left: 2.75rem;
+        padding-right: 2.75rem
+    }
+
+    #sidebar .sidebar-bottom {
+        padding-left: 2.75rem;
+        margin-bottom: 1.75rem
+    }
+
+    #sidebar .sidebar-bottom a:not(:last-child) {
+        margin-right: 1rem
+    }
+
+    #sidebar .sidebar-bottom .icon-border {
+        margin-left: calc((1rem - 3px)/2);
+        margin-right: calc((1rem - 3px)/2)
+    }
+}
