@@ -13,6 +13,11 @@
     .container {
         max-width: 720px;
     }
+
+    #tail-wrapper {
+        padding-right: 1.5rem!important;
+        padding-left: 1.5rem!important;
+    }
 }
 
 @media screen and (max-width: 849px) {
@@ -75,6 +80,18 @@
     .search {
         margin-left: 0;
     }
+
+    #tail-wrapper {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+
+    .footer-info {
+        padding-bottom: 1rem!important;
+        align-items: center!important;
+        justify-content: space-between!important;
+        flex-direction: row!important;
+    }
 }
 
 @media screen and (min-width: 850px) and (max-width: 1199px) {
@@ -90,6 +107,11 @@
 @media screen and (min-width: 1200px) {
     .container {
         max-width: 1140px;
+    }
+
+    #tail-wrapper {
+        flex: 0 0 auto;
+        width: 75%;
     }
 }
 
@@ -143,5 +165,9 @@
 
     #topbar-wrapper {
         left: 300px;
+    }
+
+    #tail-wrapper {
+        padding-right: 4.5rem!important;
     }
 }
