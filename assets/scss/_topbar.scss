@@ -1,0 +1,112 @@
+#main-wrapper {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    padding-right: 7.5rem;
+    padding-left: 7.5rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#topbar-wrapper {
+    height: 3rem;
+    background-color: $main-bg;
+}
+
+#topbar {
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    display: flex;
+}
+
+#breadcrumb {
+    font-size: 1rem;
+    color: $text-color;
+    padding-left: 0.5rem;
+}
+
+#sidebar-trigger, #search-trigger {
+    display: none;
+}
+
+#topbar-title {
+    display: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.search {
+    align-items: center;
+    margin-left: 1rem;
+    display: flex;
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid $search-border-color;
+    background: $main-bg;
+    padding: 0 0.5rem;
+    .bx-search {
+        user-select: none;
+    }
+
+    & i {
+        z-index: 2;
+        font-size: .9rem;
+        color: $search-icon-color;
+    }
+
+    #search-input {
+        background: center;
+        border: 0;
+        border-radius: 0;
+        padding: 0.18rem 0.3rem;
+        color: $text-color;
+        height: auto;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        appearance: none;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .form-control:focus {
+        outline: 0;
+    }
+}
+
+.input-focus {
+    box-shadow: none;
+    border-color: $search-focus-border-color;
+    background: center;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.topbar-btn {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+}
+
+#search-cancel {
+    display: none;
+    white-space: nowrap;
+}
+
