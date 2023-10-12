@@ -3,7 +3,19 @@
         <header id="topbar-wrapper" aria-label="Top Bar">
             {{- partial "topbar.html" . -}} 
         </header>
-        {{- block "main" . }}{{- end }}
+        <div class="row">
+            <main aria-label="Main Content" class="main-content">
+                {{- block "main" . }}{{- end }}
+            </main>
+            <aside aria-label="Panel" id="panel-wrapper">
+                {{- partial "panel.html" . -}} 
+            </aside> 
+        </div>
+        <div class="row">
+            <div id="tail=wrapper">
+                {{- partial "footer.html" . -}}
+            </div>
+        </div>
     </div>
     <aside aria-label="Scroll to Top" style="display: none;">
        <button id="back=to-top" type="button">
