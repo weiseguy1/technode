@@ -14,6 +14,11 @@
         max-width: 720px;
     }
 
+    .main-content {
+        padding-right: 1.5rem!important;
+        padding-left: 1.5rem!important;
+    }
+
     #tail-wrapper {
         padding-right: 1.5rem!important;
         padding-left: 1.5rem!important;
@@ -81,6 +86,11 @@
         margin-left: 0;
     }
 
+    .main-content {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+
     #tail-wrapper {
         flex: 0 0 auto;
         width: 91.66666667%;
@@ -112,6 +122,11 @@
     #panel-wrapper {
         flex: 0 0 auto;
         width: 25%;
+    }
+
+    .main-content {
+        flex: 0 0 auto;
+        width: 75%;
     }
 
     #tail-wrapper {
@@ -170,6 +185,11 @@
 
     #topbar-wrapper {
         left: 300px;
+    }
+
+    .main-content {
+        flex: 0 0 auto;
+        width: 75%;
     }
 
     #tail-wrapper {
