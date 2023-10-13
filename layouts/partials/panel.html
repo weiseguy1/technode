@@ -1,0 +1,22 @@
+<div class="access">
+    <section id="access-lastmod">
+        <h2 class="panel-heading">Recently Updated</h2>
+        <ul class="content">
+            {{ range ( where .Site.RegularPages "Type" "posts" | first 5 ) }}
+                <li class="text-truncate">
+                    <a class="site-links" href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+            {{end}}
+        </ul>
+    </section>
+    <section>
+        <h2 class="panel-heading">Trending Tags</h2>
+        <div class="panel-tag-list">
+            {{range $name, $taxonomy := .Site.Taxonomies.tags}}
+	            {{ with $.Site.GetPage (printf "/tags/%s" $name | first 10) }}
+		            <a class="post-tag" href={{ .RelPermalink }}>{{$name}}</a>
+	            {{end}}
+	        {{end}}
+        </div>
+    </section>
+</div>

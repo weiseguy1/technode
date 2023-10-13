@@ -109,6 +109,11 @@
         max-width: 1140px;
     }
 
+    #panel-wrapper {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
     #tail-wrapper {
         flex: 0 0 auto;
         width: 75%;
