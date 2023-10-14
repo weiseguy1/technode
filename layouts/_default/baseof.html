@@ -3,7 +3,33 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "sidebar.html" . -}}
-        {{- partial "wrapper.html" . -}}
+        <div id="main-wrapper">
+            <div class="container">
+                <header id="topbar-wrapper" aria-label="Top Bar">
+                    {{- partial "topbar.html" . -}} 
+                </header>
+                <div class="row">
+                    <main aria-label="Main Content" class="main-content">
+                        {{ block "main" . }}
+
+                        {{ end }}
+                    </main>
+                    <aside aria-label="Panel" id="panel-wrapper">
+                        {{- partial "panel.html" . -}} 
+                    </aside> 
+                </div>
+                <div class="row">
+                    <div id="tail=wrapper">
+                        {{ partial "footer.html" . }}
+                    </div>
+                </div>
+            </div>
+            <aside aria-label="Scroll to Top" style="display: none;">
+               <button id="back=to-top" type="button">
+                   <i class='bx bx-chevron-up'></i>
+               </button> 
+            </aside>
+        </div>
         <script src="/js/scripts.js"></script>
         <script src="/js/inputfocus.js"></script>
     </body>
