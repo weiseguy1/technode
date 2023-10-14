@@ -1,10 +1,10 @@
 <aside aria-label="Sidebar" id="sidebar">
     <header class="profile-wrapper">
-        <a href="#" id="avatar">
+        <a href="{{ .Site.BaseURL }}" id="avatar">
             <img src="{{ .Site.Params.avatarURL }}" alt="avatar" height="112" width="112" onerror="this.style.display='none'">
         </a>
         <h1 class="site-title">
-            <a href="#">{{ .Site.Title }}</a>  
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>  
         </h1>
         <p class="site-subtitle">
             {{ .Site.Params.description }} 
