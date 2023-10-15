@@ -19,9 +19,16 @@
         padding-left: 1.5rem!important;
     }
 
+
     #tail-wrapper {
         padding-right: 1.5rem!important;
         padding-left: 1.5rem!important;
+    }
+}
+
+@media screen and (min-width: 831px) {
+    #post-list {
+        margin-top: 2.5rem;
     }
 }
 
@@ -129,6 +136,10 @@
         width: 75%;
     }
 
+    #post-list {
+        padding-right: 0.5rem!important;
+    }
+
     #tail-wrapper {
         flex: 0 0 auto;
         width: 75%;
@@ -192,7 +203,7 @@
         width: 75%;
     }
 
-    #tail-wrapper {
+    .main-content, #tail-wrapper {
         padding-right: 4.5rem!important;
     }
 }

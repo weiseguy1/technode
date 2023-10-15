@@ -21,7 +21,7 @@
                         <i class='bx bx-calendar-alt'></i>
                         <time>{{ .Date.Format "Jan 2, 2006" }}</time>
                         <i class='bx bx-folder-open' ></i>
-                        <span class="categories">{{ .Params.categories }}</span>
+                        <span class="categories">{{ range .Params.categories }} {{.}} {{end}}</span>
                    </div> 
                 </div>
             </div>
