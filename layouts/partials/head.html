@@ -3,9 +3,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" href="{{ .Site.Params.avatarURL }}">
-    {{ $css := resources.Get "scss/style.scss" }}
-    {{ $css = $css | toCSS }}
-    <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
+    {{ $opts := dict "transpiler" "dartsass" }}
+    {{ $scss := resources.Get "scss/style.scss" }}
+    {{ $styles := $scss | resources.ToCSS $opts }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
     {{ $title := print .Title " | " .Site.Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>
