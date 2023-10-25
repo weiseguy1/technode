@@ -1,11 +1,17 @@
-@import 'fonts';
-@import 'colors';
+// variables & functions
+@import 'variables';
+
+// base & layout
 @import 'boilerplate';
-@import 'sidebar';
-@import 'topbar';
+
+// components
+@import 'components/sidebar';
+@import 'components/topbar';
 @import 'shared';
 @import 'main';
-@import 'card';
-@import 'panel';
-@import 'footer';
+@import 'components/card';
+@import 'components/panel';
+@import 'components/footer';
 @import 'media';
+
+// utilities
