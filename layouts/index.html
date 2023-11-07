@@ -1,2 +1,32 @@
 {{ define "main" }}
+<div id="post-list">
+    {{ range .Paginator.Pages.Reverse }} 
+    <article class="card-wrapper">
+        <a href="{{ .RelPermalink }}" class="card">
+            <div class="preview-img">
+                <img data-src="{{ .Params.headerimg }}" width=17 height=10 alt="Preview Image" data-lqip="true" src="{{ .Params.headerimg }}" class=" lazyloaded" data-proofer-ignore> 
+            </div>
+            <div class="card-body">
+                <h1 class="card-title">
+                    {{ .Title }}
+                </h1>
+                <div class="card-text">
+                    <p>
+                        {{ $summary := index (split .Content ".") 0 }}
+                        {{ $summary | plainify }}
+                    </p>
+                </div>
+                <div class="post-meta">
+                   <div class="me-auto">
+                        <i class='bx bx-calendar-alt'></i>
+                        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+                        <i class='bx bx-folder-open' ></i>
+                        <span class="categories">{{ range .Params.categories }} {{.}} {{end}}</span>
+                   </div> 
+                </div>
+            </div>
+        </a> 
+    </article>
+    {{ end }}
+</div>
 {{ end }}

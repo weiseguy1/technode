@@ -1,1 +1,16 @@
-<p class="footer text-center">Copyright (c) {{ now.Format "2006"}} John Doe</p>
+<footer class="footer-info">
+    <p>
+         &copy; 
+        <time>{{ now.Format "2006"}}</time> 
+        <a href="{{ .Site.Params.footer_title_link }}">{{ .Site.Title }}</a> 
+        <span data-bs-toggle="tooltip" 
+            data-bs-placement="top" 
+            data-bs-original-title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">
+            Some rights reserved.
+        </span>
+    </p>
+    <p>
+        See something wrong? Want to contribute?
+        <a href="{{ .Site.Params.footer_issue_link }}">Edit this page</a>
+    </p>
+</footer>

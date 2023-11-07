@@ -1,0 +1,36 @@
+// fonts
+@import url(https://fonts.bunny.net/css?family=source-sans-pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i);
+$body-font-family: source-sans-pro, sans-serif; 
+$body-font-size: 1rem;
+$body-font-weight: 400;
+$body-line-height: 1.5;
+
+// colors
+$main-bg: #1B1B1E;
+$text-color: #AFB0B1;
+$avatar-border-color: #CECECE;
+$default-link-color: #868585;
+$sidebar-active-color: #fff;
+$sidebar-hover-bg: #363636;
+$sidebar-btn-color: #787878;
+$sidebar-btn-bg: rgba(84, 83, 83, 0.3);
+$sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
+$search-border-color: #373737;
+$search-icon-color: #646669; 
+$search-focus-border-color: #707273;
+$base-border-color: #292929;
+
+// spacing
+$base-padding: 0.75rem;
+$nav-link-padding-y: 0.5rem; 
+$nav-link-padding-x: 1rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+$base-border: $base-border-thickness solid $base-border-color;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+$avatar-box-shadow: $avatar-border-color 0 0 0 2px;

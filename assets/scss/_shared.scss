@@ -1,0 +1,31 @@
+#main-wrapper>.container>.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-right: calc(-.5 * 1.5rem);
+    margin-left: calc(-.5 * 1.5rem);
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    margin-top: 0;
+}
+
+.site-links {
+    color: #868686;
+//    font-size: .8rem;
+}
+
+.site-links:hover {
+    color: #fd7e14;
+    text-decoration: underline;
+}
