@@ -18,3 +18,19 @@ $sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
 $search-border-color: #373737;
 $search-icon-color: #646669; 
 $search-focus-border-color: #707273;
+$base-border-color: #292929;
+
+// spacing
+$base-padding: 0.75rem;
+$nav-link-padding-y: 0.5rem; 
+$nav-link-padding-x: 1rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+$base-border: $base-border-thickness solid $base-border-color;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+$avatar-box-shadow: $avatar-border-color 0 0 0 2px;
